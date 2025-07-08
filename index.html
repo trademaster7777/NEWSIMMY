@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEC Solar Calculator - Free Solar Panel Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1>LEC Solar Calculator</h1>
+            </div>
+            <button class="cta-button">SOLAR SIMULATOR</button>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Step Indicator -->
+            <div class="step-indicator">
+                <div class="step active" data-step="1">
+                    <div class="step-icon">1</div>
+                    <div class="step-label">Your Project</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="2">
+                    <div class="step-icon">2</div>
+                    <div class="step-label">Your Exposure</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="3">
+                    <div class="step-icon">3</div>
+                    <div class="step-label">Your Consumption</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="4">
+                    <div class="step-icon">4</div>
+                    <div class="step-label">Our Solution</div>
+                </div>
+            </div>
+
+            <!-- Form Steps -->
+            <div class="form-container">
+                <!-- Step 1: Your Project -->
+                <div class="form-step active" data-step="1">
+                    <h2>Your Project</h2>
+                    <p>Tell us about your property to get started</p>
+                    <div class="form-group">
+                        <label>You are</label>
+                        <div class="radio-group">
+                            <button class="radio-button" data-value="owner">Property Owner</button>
+                            <button class="radio-button" data-value="tenant">Tenant</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Your region</label>
+                        <select id="region-select">
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    <button class="next-step">Next Step</button>
+                </div>
+
+                <!-- Step 2: Your Exposure -->
+                <div class="form-step" data-step="2">
+                    <h2>Your Exposure</h2>
+                    <p>How is your roof oriented?</p>
+                    <div class="roof-options">
+                        <!-- Roof options will be populated by JavaScript -->
+                    </div>
+                    <button class="prev-step">Previous</button>
+                    <button class="next-step">Next Step</button>
+                </div>
+
+                <!-- Step 3: Your Consumption -->
+                <div class="form-step" data-step="3">
+                    <h2>Your Consumption</h2>
+                    <p>How much electricity do you consume annually?</p>
+                    <div class="form-group">
+                        <label>Annual Consumption (kWh)</label>
+                        <input type="number" id="consumption-input" placeholder="e.g., 12000">
+                    </div>
+                    <div class="consumption-details">
+                        <!-- Consumption details will be populated by JavaScript -->
+                    </div>
+                    <button class="prev-step">Previous</button>
+                    <button class="next-step">Next Step</button>
+                </div>
+
+                <!-- Step 4: Our Solution -->
+                <div class="form-step" data-step="4">
+                    <h2>Our Solution</h2>
+                    <p>Here is your personalized solar solution</p>
+                    <div class="results-container">
+                        <!-- Results will be populated by JavaScript -->
+                    </div>
+                    <button class="prev-step">Previous</button>
+                    <button class="cta-button">Get Expert Consultation</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
